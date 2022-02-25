@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+        
+        <link rel="stylesheet" href="main.css">
+        
+    </head>
+    <body>
+
+        <!-- Add your site or application content here -->
+        <div id="goalLineSouth"></div>
+        <div id="rink">
+            <input type="text" id="cornerSouth" placeholder="0.00" onfocusout="printP('cornerSouth', 'cornerSouthPara')">
+            <p id="cornerSouthPara" onclick="makeChange('cornerSouthPara','cornerSouth')"></p>
+            <input type="text" id="GoalLineSouth2" placeholder="0.00" onfocusout="printP('GoalLineSouth2', 'GoalLineSouth2Para')">
+            <p id="GoalLineSouth2Para" onclick="makeChange('GoalLineSouth2Para','GoalLineSouth2')"></p>
+        </div>
+        <div id="faceOffCircleNW"></div>
+        <div id="faceOffCircleSW"></div>
+        <div id="backGoalWest"></div>
+    <script>
+        function printP (elem, elemToChange) {
+            elem = document.getElementById(elem);
+            elemToChange = document.getElementById(elemToChange);
+
+            elemToChange.innerHTML = elem.value;
+            elem.style = "display:none;"
+
+        }
+        function makeChange(elem, elemToChange) {
+            elem = document.getElementById(elem);
+            elemToChange = document.getElementById(elemToChange);
+
+            elemToChange.style = "display: inline-block";
+            elem.innerHTML = "";
+        }
+    </script>
+    </body>
+</html>

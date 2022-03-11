@@ -16,22 +16,40 @@
 
         <!-- Add your site or application content here -->
         <div id="goalLineSouth"></div>
+        <div id="faceOffCircleNW"></div>
+        <div id="faceOffCircleSW"></div>
+        <div id="GoalWest"></div>
+        <div id="ringetteLine"></div>
         <div id="rink">
             <input type="text" id="cornerSouth" placeholder="0.00" onfocusout="printP('cornerSouth', 'cornerSouthPara')">
             <p id="cornerSouthPara" onclick="makeChange('cornerSouthPara','cornerSouth')"></p>
-            <input type="text" id="GoalLineSouth2" placeholder="0.00" onfocusout="printP('GoalLineSouth2', 'GoalLineSouth2Para')">
-            <p id="GoalLineSouth2Para" onclick="makeChange('GoalLineSouth2Para','GoalLineSouth2')"></p>
+            <input type="text" id="GoalLineSouthInput" placeholder="0.00" onfocusout="printP('GoalLineSouthInput', 'GoalLineSouth2Para')">
+            <p id="GoalLineSouth2Para" onclick="makeChange('GoalLineSouth2Para','GoalLineSouthInput')"></p>
+            <input type="text" id="GoalWestInput" placeholder="0.00" onfocusout="printP('GoalWestInput', 'GoalWestPara')">
+            <p id="GoalWestPara" onclick="makeChange('GoalWestPara','GoalWestInput')"></p>
+            <input type="text" id="faceOffNorth" placeholder="0.00" onfocusout="printP('faceOffNorth', 'faceOffNorthPara')">
+            <p id="faceOffNorthPara" onclick="makeChange('faceOffNorthPara','faceOffNorth')"></p>
+            <input type="text" id="cornerNorth" placeholder="0.00" onfocusout="printP('cornerNorth', 'cornerNorthPara')">
+            <p id="cornerNorthPara" onclick="makeChange('cornerNorthPara','cornerNorth')"></p>
+            <input type="text" id="faceOffCircleNWInput" placeholder="0.00" onfocusout="printP('faceOffCircleNWInput', 'faceOffCircleNWPara')">
+            <p id="faceOffCircleNWPara" onclick="makeChange('faceOffCircleNWPara','faceOffCircleNWInput')"></p>
+            <input type="text" id="faceOffCircleInnerNWInput" placeholder="0.00" onfocusout="printP('faceOffCircleInnerNWInput', 'faceOffCircleInnerNWPara')">
+            <p id="faceOffCircleInnerNWPara" onclick="makeChange('faceOffCircleInnerNWPara','faceOffCircleInnerNWInput')"></p>
+            <input type="text" id="ringetteLineWestInput" placeholder="0.00" onfocusout="printP('ringetteLineWestInput', 'ringetteLineWestPara')">
+            <p id="ringetteLineWestPara" onclick="makeChange('ringetteLineWestPara','ringetteLineWestInput')"></p>
+            <input type="text" id="faceOffCircleInnerSWInput" placeholder="0.00" onfocusout="printP('ringetteLineWestInput', 'ringetteLineWestPara')">
+            <p id="faceOffCircleInnerSWPara" onclick="makeChange('ringetteLineWestPara','ringetteLineWestInput')"></p>
         </div>
-        <div id="faceOffCircleNW"></div>
-        <div id="faceOffCircleSW"></div>
-        <div id="backGoalWest"></div>
+        
     <script>
         function printP (elem, elemToChange) {
             elem = document.getElementById(elem);
             elemToChange = document.getElementById(elemToChange);
-
-            elemToChange.innerHTML = elem.value;
-            elem.style = "display:none;"
+            if(elem.value !== "")
+            { 
+                elemToChange.innerHTML = elem.value;
+                elem.style = "display:none;"
+            }
 
         }
         function makeChange(elem, elemToChange) {

@@ -1,3 +1,20 @@
+* {
+    position: absolute;
+}
+
+
+
+/* 
+**********************
+**********************
+**********************
+**********************
+Lines, face off circles 
+**********************
+**********************
+**********************
+**********************
+*/
 #rink {
     width: 800px;
     height: 375px;
@@ -5,28 +22,23 @@
     border-radius: 50px;
 }
 #goalLineSouth {
-    position: absolute;
     left: 80px;
-    top: 13px;
+    top: 5px;
     width: 5px;
     height: 375px;
     border-right: 5px solid red ;
 }
-input {
-    width: 40px;
-}
-#GoalLineSouth2 {
-    position: absolute;
-    top: 80px;
-    left: 25px;
-}
-#GoalLineSouth2Para {
-    position: absolute;
-    top: 80px;
-    left: 25px;
+#faceOffCircleSW {
+    
+    left: 130px;
+    top: 245px;
+    width: 100px;
+    height: 100px;
+    border: 5px solid red;
+    border-radius: 50%;
 }
 #faceOffCircleNW {
-    position: absolute;
+    
     left: 130px;
     top: 45px;
     width: 100px;
@@ -34,12 +46,70 @@ input {
     border: 5px solid red;
     border-radius: 50%;
 }
-#faceOffCircleSW {
-    position: absolute;
-    left: 130px;
-    top: 245px;
-    width: 100px;
-    height: 100px;
-    border: 5px solid red;
-    border-radius: 50%;
+#GoalWest {
+    
+    left: 60px;
+    top: 167px;
+    width: 20px;
+    height: 60px;
+    border: 5px solid black;
+}
+#ringetteLine {
+    left: 235px;
+    top: 3px;
+    width: 5px;
+    height: 375px;
+    border-right: 5px solid red;
+    
+}
+/* 
+**********************
+inputs, p elements 
+**********************
+*/
+
+p {
+    margin: 0px;
+}
+input {
+    width: 40px;
+}
+#GoalLineSouth2Para, #GoalLineSouthInput {
+    top: 80px;
+    left: 50px;
+}
+#cornerSouthPara, #cornerSouth {
+    left:40px;
+    top:13px;
+}
+#GoalWestInput, #GoalWestPara {
+    top: 187px;
+    left: 25px;
+}
+#faceOffNorth {
+    top: 275px;
+    left: 25px;
+}
+#faceOffCircleNWPara, #faceOffCircleNWInput {
+    top: 54px;
+    left: 186px;
+}
+
+#cornerNorth, #cornerNorthPara {
+    top: 360px;
+    left: 25px;
+}
+#faceOffCircleInnerNWInput, #faceOffCircleInnerNWPara {  
+    top: 125px;
+    left: 190px;
+}
+
+#ringetteLineWestInput,
+#ringetteLineWestPara {
+    top: 198px;
+    left: 240px;
+}
+#faceOffCircleInnerSWInput, #faceOffCircleInnerSWPara {
+    top: 261px;
+    left: 178px;
 }
